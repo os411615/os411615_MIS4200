@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-bordered table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Doctor.doctorFirstName)
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.appointmentDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.appointmentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.appointmentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.appointmentID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.appointmentID }) <a span class="glyphicon glyphicon-pencil"></a> |
+            @Html.ActionLink("Details", "Details", new { id=item.appointmentID }) <a span class="glyphicon glyphicon-paperclip"></a> |
+            @Html.ActionLink("Delete", "Delete", new { id=item.appointmentID }) <a span class="glyphicon glyphicon-trash"></a>
         </td>
     </tr>
 }
