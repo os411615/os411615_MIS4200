@@ -10,8 +10,9 @@ namespace os411615_MIS4200.Models
     public class Doctor
     {
         public int doctorID { get; set; }
+        public string doctorFullName { get { return doctorLastName + ", " + doctorFirstName; } }
 
-        public System.Guid SID { get; set; }
+        // public System.Guid SID { get; set; }
 
         [Display(Name = "Doctor First Name")]
         [Required(ErrorMessage = "Doctor first name is required")]

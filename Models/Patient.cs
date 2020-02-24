@@ -9,9 +9,13 @@ namespace os411615_MIS4200.Models
 {
     public class Patient
     {
-        public int patientID { get; set; }
+        private string patientfirstName;
+        private string patientlastName;
 
-        public System.Guid SID { get; set; }
+        public int patientID { get; set; }
+        public string patientFullName { get { return patientLastName + ", " + patientFirstName; } }
+
+        // public System.Guid SID { get; set; }
 
         [Display (Name ="Patient First Name")]
         [Required(ErrorMessage ="Patient first name is required")]
@@ -21,7 +25,7 @@ namespace os411615_MIS4200.Models
         [Display (Name ="Patient Last Name")]
         [Required]
         [StringLength(20)]
-        public string patientLastname { get; set; }
+        public string patientLastName { get; set; }
 
         [Display (Name ="Patient Email")]
         [Required]

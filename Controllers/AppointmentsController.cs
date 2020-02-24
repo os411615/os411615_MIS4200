@@ -40,8 +40,8 @@ namespace os411615_MIS4200.Controllers
         // GET: Appointments/Create
         public ActionResult Create()
         {
-            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFirstName");
-            ViewBag.patientID = new SelectList(db.Patient, "patientID", "patientFirstName");
+            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFullName");
+            ViewBag.patientID = new SelectList(db.Patient, "patientID", "patientFullName");
             return View();
         }
 
